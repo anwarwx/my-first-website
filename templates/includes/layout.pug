@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    block styles
+      link(rel="stylesheet", href="/css/main.css")
+    block scripts
+      script(defer src="/js/main.js")
+  body
+    block content
+      include nav.pug

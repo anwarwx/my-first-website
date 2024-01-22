@@ -1,0 +1,32 @@
+extends includes/layout.pug
+
+block append scripts
+  script(defer src="/js/sale.js")
+
+block append content
+  div#sale_banner
+    span text
+  h1#company_title GreenWrap Solutions
+  section#about_me
+    h2 Sustainability Wrapped in Every Box
+    img#company_logo(alt="Picture representing the company", src="/images/logo.png")
+    div#company_info
+      p.
+        At GreenWrap Solutions, we are on a mission to revolutionize the packaging industry
+        through sustainable practices and innovative solutions. We believe that packaging
+        should not only protect and deliver products but also play a crucial role in preserving
+        the planet for future generations.
+      p.
+        We are driven by an unwavering commitment to environmental responsibility. 
+        Our eco-friendly packaging solutions are designed to #[em minimize] waste, 
+        #[em reduce] carbon footprint, and #[em promote] a circular economy. By 
+        choosing our products, you're not just getting packaging; 
+        #[strong you're joining us in making a positive impact on the environment!]
+      p
+        | Why choose GreenWrap Solutions:
+      ol
+        li Sustainable Packaging Expertise
+        li Custom Solutions for Your Brand
+        li Environmental Responsibility at the Core
+        li Commitment to Reduce, Reuse, Recycle
+        li Innovation and Quality Assurance

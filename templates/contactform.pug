@@ -1,0 +1,33 @@
+extends includes/layout.pug
+
+block append scripts
+  script(defer src="/js/contact.js")
+
+block append content
+  div#contact_form
+    form(action="contact", method="POST")
+      p
+        label(for="name") Name: 
+        input#name(type="text", name="name" required)
+      p
+        label(for="email") Email: 
+        input#email(type="email", name="email", placeholder="name@domain.com" required)
+      p
+        label(for="date") Date: 
+        input#date(type="date", name="date")
+      p
+        label(for="dropdown")
+        select#dropdown(name="dropdown")
+          option(value="option") Please choose an option
+          option(value="chrome") Chrome
+          option(value="edge") Edge
+          option(value="firefox") Firefox
+          option(value="safari") Safari
+          option(value="opera") Opera
+      p
+        label(for="checkbox") Subscribe to our emails:
+        input#checkbox(type="checkbox", name="checkbox")
+      p
+        span#placeholder
+        span#calculation
+      input(type="submit", value="Submit")

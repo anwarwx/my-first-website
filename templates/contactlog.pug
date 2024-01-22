@@ -1,0 +1,32 @@
+extends includes/layout.pug
+
+block append scripts
+  script(defer src="/js/table.js")
+
+block append content
+  div#set_sale
+    p#sale_p
+      label(for="sale_text") Message: 
+      input#sale_text(type="text", name="sale_text" required)
+    p
+      span
+        button#setSaleButton(type="button") Set
+      span
+        button#delSaleButton(type="button") Delete
+  div#contact_log
+    table
+      caption Contact Information
+      tr
+        each v in labels
+          th= v
+      each o in contacts
+        tr(id=o.contact_id)
+          each v, k in o
+            if (k != "contact_id")
+              if (k == "date")
+                td.date= v
+              else
+                td= v
+          td.timeUntil
+          td
+            button.deleteRowButton(type="button") Click Me!
