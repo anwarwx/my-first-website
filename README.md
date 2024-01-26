@@ -1,4 +1,4 @@
-# first-website
+# my-first-website
 ## Main Page
 ![Main Page Image](imgs/main.png)
 ## Contact Page
